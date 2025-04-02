@@ -48,9 +48,12 @@ git clone https://github.com/aarushiverma7/Bright--money
 cd credimate
 ```
 
-### 2. Create a Virtual Environment python -m venv venv
+### 2. Create a Virtual Environment 
 
+```bash
+python -m venv venv
 venv\Scripts\activate
+```
 
 ### 3. Install Dependencies
 
@@ -64,7 +67,10 @@ Make sure Redis is installed and running. You can start Redis in docker with:
 
 ```bash
 redis-server
-# with docker  
+# with docker
+docker ps
+docker pull redis
+docker run --name redis-server-alt -d -p 6380:6379 redis 
 ```
 
 ### 5. Run Database Migrations
